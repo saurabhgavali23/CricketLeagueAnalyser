@@ -3,13 +3,17 @@ package cricketleagueanalyser;
 import csvbuilder.CSVBuilderException;
 import csvbuilder.CSVBuilderFactory;
 import csvbuilder.ICSVBuilder;
+
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import static java.util.Comparator.comparing;
 
 public class CricketLeagueAnalyser {
@@ -35,7 +39,7 @@ public class CricketLeagueAnalyser {
     public List getTopBattingAvgList() {
 
         List<IPLCSVData> sortedAvgList = IPLCSVList.stream()
-                .sorted((bat1,bat2)-> (int) (bat2.avg - bat1.avg))
+                .sorted((bat1, bat2) -> (int) (bat2.avg - bat1.avg))
                 .collect(Collectors.toList());
         return sortedAvgList;
     }
@@ -49,10 +53,17 @@ public class CricketLeagueAnalyser {
     }
 
     public List getMax4sAnd6s() {
-      List<IPLCSVData> sorted6sAnd4sList = IPLCSVList.stream()
-              .sorted(comparing(player -> player.six * 6 + player.four * 4))
-              .collect(Collectors.toList());
-      Collections.reverse(sorted6sAnd4sList);
-      return sorted6sAnd4sList;
+        List<IPLCSVData> sorted6sAnd4sList = IPLCSVList.stream()
+                .sorted(comparing(player -> player.six * 6 + player.four * 4))
+                .collect(Collectors.toList());
+        Collections.reverse(sorted6sAnd4sList);
+        return sorted6sAnd4sList;
+    }
+
+    public List getBestStrikeRateWithMax4sAnd6s() {
+        Comparator<IPLCSVData> comparator = Comparator.comparing(player -> player.six * 6 + player.four * 4);
+        comparator = comparator.thenComparing(player -> player.strikeRate);
+        Collections.sort(IPLCSVList, comparator.reversed());
+        return IPLCSVList;
     }
 }
