@@ -34,11 +34,18 @@ public class CricketLeagueAnalyser {
     }
 
     public List getTopBattingAvgList() {
-
         List<IPLCSVData> sortedAvgList = IPLCSVList.stream()
                 .sorted(Comparator.comparing(iplCsvData -> iplCsvData.avg))
                 .collect(Collectors.toList());
         Collections.reverse(sortedAvgList);
         return sortedAvgList;
+    }
+
+    public List getTopStrikeRateList() {
+        List<IPLCSVData> sortedStrikeRateList = IPLCSVList.stream()
+                .sorted(Comparator.comparing(iplCsvData -> iplCsvData.strikeRate))
+                .collect(Collectors.toList());
+        Collections.reverse(sortedStrikeRateList);
+        return sortedStrikeRateList;
     }
 }

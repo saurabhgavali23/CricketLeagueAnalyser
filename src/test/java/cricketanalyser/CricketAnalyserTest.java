@@ -41,6 +41,20 @@ public class CricketAnalyserTest {
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
+    }
 
+    @Test
+    public void givenCricketSheetMostRuns_ShouldReturnStrikeRatesOfCricketersWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
+            List<IPLCSVData> topStrikeRateList = cricketLeagueAnalyser.getTopStrikeRateList();
+            Assert.assertEquals(333.33, topStrikeRateList.get(0).strikeRate, 0);
+            Assert.assertEquals(63.15, topStrikeRateList.get(99).strikeRate, 0);
+
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
     }
 }
