@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="707deff2-fadf-4e74-8b80-bc8bfb8fef1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" afterDir="false" />
     </list>
@@ -35,12 +36,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+            <state relative-caret-position="423">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,19 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/IPLCSVData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+            <state relative-caret-position="236">
+              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,6 +102,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -133,7 +126,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,27 +158,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s">
-    <configuration name="CricketAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;cricketanalyser.CricketAnalyserTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate">
     <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -213,6 +185,26 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;cricketanalyser.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;cricketanalyser.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -269,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfCricketersWhoPlayedIPL2019" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnStrikeRatesOfCricketersWhoPlayedIPL2019" />
-        <item itemvalue="Gradle.CricketAnalyserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -291,100 +283,70 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019 - 2020.01.17 at 16h 44m 42s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019 - 2020.01.17 at 17h 02m 56s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnAveragesOfCricketersWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfCricketersWhoPlayedIPL2019 - 2020.01.17 at 17h 26m 02s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfCricketersWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfCricketersWhoPlayedIPL2019 - 2020.01.17 at 17h 29m 29s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfCricketersWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 18h 42m 01s.xml">
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 25m 55s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 18h 42m 15s.xml">
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 27m 36s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 00m 13s.xml">
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 29m 24s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 11m 17s.xml">
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 29m 47s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 12m 11s.xml">
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 32m 23s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.17 at 19h 13m 11s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate - 2020.01.18 at 10h 12m 43s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate - 2020.01.18 at 10h 13m 17s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate - 2020.01.18 at 10h 13m 59s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate - 2020.01.18 at 10h 16m 20s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate - 2020.01.18 at 10h 16m 50s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadGreatAverageBestStrikeRate" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18754987" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19074222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.44788274" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.32954547" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.048859935" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6970684" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5846906" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.44788274" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Learn" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.21947326" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3306189" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="3" weight="0.32954547" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.42019543" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.5846906" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -574,26 +536,8 @@
     <entry file="file://$PROJECT_DIR$/build/reports/tests/test/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="56" lean-forward="true" selection-end-line="101" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019.csv" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -630,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+        <state relative-caret-position="236">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -640,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        <state relative-caret-position="423">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
