@@ -85,4 +85,19 @@ public class CricketAnalyserTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
+            List<BatsmanDAO> maxRunsWithBestAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.MaxRunsWithBestAvg);
+            Assert.assertEquals("David Warner", maxRunsWithBestAvg.get(0).player);
+            Assert.assertEquals("Tim Southee", maxRunsWithBestAvg.get(99).player);
+
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }
