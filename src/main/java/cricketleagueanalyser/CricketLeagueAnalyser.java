@@ -8,8 +8,13 @@ public class CricketLeagueAnalyser {
 
     List<BatsmanDAO> BATSMANLIST = null;
 
-    public int loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
-        BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath);
+    public int loadBatsmanCSVData(String CsvFilePath) throws CricketLeagueException {
+        BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BatsmanDAO.class);
+        return BATSMANLIST.size();
+    }
+
+    public int loadBowlerCSVData(String CsvFilePath) throws CricketLeagueException {
+        BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BowlerDAO.class);
         return BATSMANLIST.size();
     }
 

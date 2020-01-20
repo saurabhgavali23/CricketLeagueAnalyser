@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="707deff2-fadf-4e74-8b80-bc8bfb8fef1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/SortedFieldData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/SortedFieldData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BowlerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostWkts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="170">
+              <caret line="10" column="58" lean-forward="true" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,11 +65,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/SortedFieldData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="103">
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1280#1281#0" expanded="true" />
+                <element signature="e#1283#1284#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="80" lean-forward="true" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+            <state relative-caret-position="307">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,11 +90,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="4">
+              <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostWkts.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -115,14 +153,17 @@
         <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/IPL2019.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostRuns.csv" />
-        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv" />
         <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/IPLCSVData.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/cricketleagueadapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BowllerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BowlerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricketleagueanalyser/SortedFieldData.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv" />
+        <option value="$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostWkts.csv" />
       </list>
     </option>
   </component>
@@ -237,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019">
+  <component name="RunManager" selected="Gradle.CricketAnalyserTest.givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019">
     <configuration name="CricketAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -318,12 +359,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfBatsmanWhoPlayedIPL2019" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketAnalyserTest.givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;cricketanalyser.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfBatsmanWhoPlayedIPL2019&quot;" />
+        <option name="scriptParameters" value="--tests &quot;cricketanalyser.CricketAnalyserTest.givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -340,11 +381,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019" />
-        <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnGreatAverageWithBestStrikeRateWhoPlayedIPL2019" />
         <item itemvalue="Gradle.CricketAnalyserTest" />
+        <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnGreatAverageWithBestStrikeRateWhoPlayedIPL2019" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" />
-        <item itemvalue="Gradle.CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaximum4sAnd6sOfBatsmanWhoPlayedIPL2019" />
       </list>
     </recent_temporary>
   </component>
@@ -362,15 +403,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.20 at 12h 27m 16s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.20 at 12h 30m 29s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s - 2020.01.20 at 12h 36m 35s.xml">
-      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="CricketAnalyserTest - 2020.01.20 at 12h 37m 56s.xml">
       <configuration name="CricketAnalyserTest" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -392,12 +424,21 @@
     <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019 - 2020.01.20 at 14h 29m 40s.xml">
       <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="CricketAnalyserTest - 2020.01.20 at 14h 48m 45s.xml">
+      <configuration name="CricketAnalyserTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019 - 2020.01.20 at 15h 30m 02s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostRuns_ShouldReturnMaxRunsWithBestAverageWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CricketAnalyserTest_givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019 - 2020.01.20 at 16h 08m 20s.xml">
+      <configuration name="CricketAnalyserTest.givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21548285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2442139" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -684,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostRuns.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -704,20 +735,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BatsmanDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="18" column="80" lean-forward="true" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BowlerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" lean-forward="true" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -726,29 +761,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/SortedFieldData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="103">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/BatsmanDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cricketanalyser/CricketAnalyserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="4">
+          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketleagueanalyser/CricketLeagueAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostWkts.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
         </state>
       </provider>
     </entry>

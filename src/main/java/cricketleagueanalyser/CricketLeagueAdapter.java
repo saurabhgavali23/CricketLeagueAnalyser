@@ -13,12 +13,12 @@ import java.util.List;
 
 public class CricketLeagueAdapter {
 
-    List<BatsmanDAO> BATSMANLIST = new ArrayList<>();
+    List BATSMANLIST = new ArrayList<>();
 
-    public List<BatsmanDAO> loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
+    public <E> List<E> loadCricketCSVData(String CsvFilePath, Class className) throws CricketLeagueException {
         try (Reader reader = Files.newBufferedReader(Paths.get(CsvFilePath));) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            BATSMANLIST = csvBuilder.getListCsvFile(reader, BatsmanDAO.class);
+            BATSMANLIST = csvBuilder.getListCsvFile(reader, className);
             return BATSMANLIST;
 
         } catch (IOException e) {
