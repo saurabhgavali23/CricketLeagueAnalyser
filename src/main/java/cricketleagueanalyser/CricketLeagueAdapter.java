@@ -13,17 +13,20 @@ import java.util.List;
 
 public class CricketLeagueAdapter {
 
-    List<IPLCSVData> IPLCSVList = new ArrayList<>();
+    List<BatsmanDAO> BATSMANLIST = new ArrayList<>();
 
-    public List<IPLCSVData> loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
+    public List<BatsmanDAO> loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
         try (Reader reader = Files.newBufferedReader(Paths.get(CsvFilePath));) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            IPLCSVList = csvBuilder.getListCsvFile(reader, IPLCSVData.class);
-            return IPLCSVList;
+            BATSMANLIST = csvBuilder.getListCsvFile(reader, BatsmanDAO.class);
+            return BATSMANLIST;
 
         } catch (IOException e) {
             throw new CricketLeagueException(e.getMessage(),
-                    CricketLeagueException.ExceptionType.CSV_FILE_PROBLEM);
+                    CricketLeagueException.ExceptionType.FILE_PROBLEM);
+        } catch (RuntimeException e) {
+            throw new CricketLeagueException(e.getMessage(),
+                    CricketLeagueException.ExceptionType.INCORRECT_FILE_DATA);
         } catch (CSVBuilderException e) {
             e.printStackTrace();
         }

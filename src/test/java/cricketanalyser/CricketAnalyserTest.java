@@ -1,8 +1,9 @@
 package cricketanalyser;
 
+import cricketleagueanalyser.BatsmanDAO;
 import cricketleagueanalyser.CricketLeagueAnalyser;
 import cricketleagueanalyser.CricketLeagueException;
-import cricketleagueanalyser.IPLCSVData;
+import cricketleagueanalyser.SortedFieldData;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,7 +21,6 @@ public class CricketAnalyserTest {
         try {
             int noOfRecords = cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
             Assert.assertEquals(100, noOfRecords);
-
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
@@ -32,7 +32,7 @@ public class CricketAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
-            List<IPLCSVData> topBattingAvg = cricketLeagueAnalyser.getTopBattingAvgList();
+            List<BatsmanDAO> topBattingAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.Avg);
             Assert.assertEquals(83.2, topBattingAvg.get(0).avg, 0);
             Assert.assertEquals(0.0, topBattingAvg.get(99).avg, 0);
 
@@ -47,7 +47,7 @@ public class CricketAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
-            List<IPLCSVData> topStrikeRateList = cricketLeagueAnalyser.getTopStrikeRateList();
+            List<BatsmanDAO> topStrikeRateList = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.StrikeRate);
             Assert.assertEquals(333.33, topStrikeRateList.get(0).strikeRate, 0);
             Assert.assertEquals(63.15, topStrikeRateList.get(99).strikeRate, 0);
 
@@ -62,24 +62,9 @@ public class CricketAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
-            List<IPLCSVData> max4sAnd6s = cricketLeagueAnalyser.getMax4sAnd6s();
+            List<BatsmanDAO> max4sAnd6s = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.FourAndSixAvg);
             Assert.assertEquals("Andre Russell", max4sAnd6s.get(0).player);
             Assert.assertEquals("Shakib Al Hasan", max4sAnd6s.get(99).player);
-
-        } catch (CricketLeagueException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Test
-    public void givenCricketSheetMostRuns_ShouldReturnListWhoHadBestStrikeRateWithMax4sAnd6s() {
-
-        try {
-            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
-            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
-            List<IPLCSVData> bestStrikeRateWithMax4sAnd6s = cricketLeagueAnalyser.getBestStrikeRateWithMax4sAnd6s();
-            Assert.assertEquals("Andre Russell", bestStrikeRateWithMax4sAnd6s.get(0).player);
-            Assert.assertEquals("Shakib Al Hasan", bestStrikeRateWithMax4sAnd6s.get(99).player);
 
         } catch (CricketLeagueException e) {
             e.printStackTrace();
