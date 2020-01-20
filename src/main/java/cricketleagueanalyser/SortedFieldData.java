@@ -11,7 +11,8 @@ public class SortedFieldData {
     public Map<Fields, Comparator<BatsmanDAO>> sortedField = null;
 
     public enum Fields {
-        POS, PLAYER, Mat, Inns, NotOut, Runs, HighScore, Avg, BallFaced, StrikeRate, Century, HalfCentury, four, six, FourAndSixAvg;
+        POS, PLAYER, Mat, Inns, NotOut, Runs, HighScore, Avg, BallFaced, StrikeRate, Century, HalfCentury, four, six, FourAndSixAvg
+        ,GreatAvgWithBestStrikeRate;
     }
 
     public SortedFieldData() {
@@ -19,6 +20,7 @@ public class SortedFieldData {
         this.sortedField.put(Fields.Avg, comparing(player -> player.avg));
         this.sortedField.put(Fields.StrikeRate, comparing(iplCsvData -> iplCsvData.strikeRate));
         this.sortedField.put(Fields.FourAndSixAvg, comparing(player -> (player.four * 4 + player.six * 6)));
+        this.sortedField.put(Fields.GreatAvgWithBestStrikeRate, this.sortedField.get(Fields.Avg).thenComparing(player -> player.strikeRate));
     }
 
     public Comparator<BatsmanDAO> getSortedFields(Fields fields) {

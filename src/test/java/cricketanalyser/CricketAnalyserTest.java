@@ -70,4 +70,19 @@ public class CricketAnalyserTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostRuns_ShouldReturnGreatAverageWithBestStrikeRateWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
+            List<BatsmanDAO> greatAvgWithBestStrikeRate = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.GreatAvgWithBestStrikeRate);
+            Assert.assertEquals("MS Dhoni", greatAvgWithBestStrikeRate.get(0).player);
+            Assert.assertEquals("Tim Southee", greatAvgWithBestStrikeRate.get(99).player);
+
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }
