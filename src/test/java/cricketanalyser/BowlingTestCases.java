@@ -80,4 +80,18 @@ public class BowlingTestCases {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostWkts_ShouldReturnGreatBallingAverageWithBestStrikeRateWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.BatOrBall.BALLING);
+            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
+            List<CricketLeagueDAO> greatAvgWithBestStrikeRate = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.GreatAvgWithBestStrikeRate);
+            Assert.assertEquals("Krishnappa Gowtham", greatAvgWithBestStrikeRate.get(0).player);
+            Assert.assertEquals("Shivam Dube", greatAvgWithBestStrikeRate.get(98).player);
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }
