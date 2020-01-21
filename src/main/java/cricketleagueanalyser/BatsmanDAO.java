@@ -5,7 +5,7 @@ import com.opencsv.bean.CsvBindByName;
 public class BatsmanDAO {
 
     @CsvBindByName(column = "POS", required = true)
-    public String pos;
+    public int pos;
 
     @CsvBindByName(column = "PLAYER", required = true)
     public String player;

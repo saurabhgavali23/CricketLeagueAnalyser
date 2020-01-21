@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
-    List<BatsmanDAO> BATSMANLIST = null;
+    List<CricketLeagueDAO> BATSMANLIST = null;
 
     public int loadBatsmanCSVData(String CsvFilePath) throws CricketLeagueException {
         BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BatsmanDAO.class);
@@ -19,10 +19,11 @@ public class CricketLeagueAnalyser {
     }
 
     public List getSortedData(SortedFieldData.Fields fieldName) {
-        List<BatsmanDAO> sortedList = BATSMANLIST.stream()
+        List sortedList = BATSMANLIST.stream()
                 .sorted(new SortedFieldData().getSortedFields(fieldName))
                 .collect(Collectors.toList());
         Collections.reverse(sortedList);
+        BATSMANLIST.stream().forEach(System.out::println);
         return sortedList;
     }
 }

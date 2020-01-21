@@ -8,7 +8,7 @@ import static java.util.Comparator.comparing;
 
 public class SortedFieldData {
 
-    public Map<Fields, Comparator<BatsmanDAO>> sortedField = null;
+    Map<Fields, Comparator<CricketLeagueDAO>> sortedField = null;
 
     public enum Fields {
         POS, PLAYER, Mat, Inns, NotOut, Runs, HighScore, Avg, BallFaced, StrikeRate, Century, HalfCentury,
@@ -25,7 +25,7 @@ public class SortedFieldData {
         this.sortedField.put(Fields.MaxRunsWithBestAvg, this.sortedField.get(Fields.Runs).thenComparing(player -> player.avg));
     }
 
-    public Comparator<BatsmanDAO> getSortedFields(Fields fields) {
+    public Comparator<CricketLeagueDAO> getSortedFields(Fields fields) {
         return sortedField.get(fields);
     }
 }
