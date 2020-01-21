@@ -6,24 +6,23 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
-    List<CricketLeagueDAO> BATSMANLIST = null;
+    List<CricketLeagueDAO> SORTEDLIST = null;
 
     public int loadBatsmanCSVData(String CsvFilePath) throws CricketLeagueException {
-        BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BatsmanDAO.class);
-        return BATSMANLIST.size();
+        SORTEDLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BatsmanDAO.class);
+        return SORTEDLIST.size();
     }
 
     public int loadBowlerCSVData(String CsvFilePath) throws CricketLeagueException {
-        BATSMANLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BowlerDAO.class);
-        return BATSMANLIST.size();
+        SORTEDLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BowlerDAO.class);
+        return SORTEDLIST.size();
     }
 
     public List getSortedData(SortedFieldData.Fields fieldName) {
-        List sortedList = BATSMANLIST.stream()
+        List sortedList = SORTEDLIST.stream()
                 .sorted(new SortedFieldData().getSortedFields(fieldName))
                 .collect(Collectors.toList());
         Collections.reverse(sortedList);
-        BATSMANLIST.stream().forEach(System.out::println);
         return sortedList;
     }
 }

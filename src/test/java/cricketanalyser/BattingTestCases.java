@@ -6,10 +6,9 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class CricketAnalyserTest {
+public class BattingTestCases {
 
     private static final String IPL2019_FACT_SHEET_MOST_RUN = "./src/test/resources/IPL2019FactSheetMostRuns.csv";
-    private static final String IPL2019_FACT_SHEET_MOST_WKTS = "./src/test/resources/IPL2019FactSheetMostWkts.csv";
 
     @Test
     public void givenCricketSheetMostRuns_ShouldReturnNumberOfRecords() {
@@ -93,18 +92,6 @@ public class CricketAnalyserTest {
             Assert.assertEquals("David Warner", maxRunsWithBestAvg.get(0).player);
             Assert.assertEquals("Tim Southee", maxRunsWithBestAvg.get(99).player);
 
-        } catch (CricketLeagueException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Test
-    public void givenCricketSheetMostWkts_ShouldReturnTopBowlingAverageWhoPlayedIPL2019() {
-
-        try {
-            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
-            int noOfRecords = cricketLeagueAnalyser.loadBowlerCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
-            Assert.assertEquals(99, noOfRecords);
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
