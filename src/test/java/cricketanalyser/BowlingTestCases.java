@@ -52,4 +52,18 @@ public class BowlingTestCases {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostWkts_ShouldReturnTopBestEconomyWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadBowlerCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
+            List<CricketLeagueDAO> toBowlingAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.BestEconomy);
+            Assert.assertEquals(13.5, toBowlingAvg.get(0).eCon, 0);
+            Assert.assertEquals(4.8, toBowlingAvg.get(98).eCon, 0);
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }
