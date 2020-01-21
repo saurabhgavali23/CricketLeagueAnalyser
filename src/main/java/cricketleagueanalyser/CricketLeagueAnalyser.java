@@ -6,15 +6,17 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
+    public enum BatOrBall { BATTING, BALLING}
     List<CricketLeagueDAO> SORTEDLIST = null;
 
-    public int loadBatsmanCSVData(String CsvFilePath) throws CricketLeagueException {
-        SORTEDLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BatsmanDAO.class);
-        return SORTEDLIST.size();
+    private BatOrBall batAndBall;
+
+    public CricketLeagueAnalyser(BatOrBall batAndBall) {
+        this.batAndBall = batAndBall;
     }
 
-    public int loadBowlerCSVData(String CsvFilePath) throws CricketLeagueException {
-        SORTEDLIST = new CricketLeagueAdapter().loadCricketCSVData(CsvFilePath, BowlerDAO.class);
+    public int loadCricketCSVData(String CsvFilePath) throws CricketLeagueException{
+        SORTEDLIST = CricketLeagueFactory.getCricketData(batAndBall,CsvFilePath);
         return SORTEDLIST.size();
     }
 
