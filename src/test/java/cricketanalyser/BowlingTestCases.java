@@ -94,4 +94,18 @@ public class BowlingTestCases {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostWkts_ShouldReturnMaxWicketWithBestAverageWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.BatOrBall.BALLING);
+            cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
+            List<CricketLeagueDAO> maxWicketWithBestAverage = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.MaxWktsWithBestBallingAvg);
+            Assert.assertEquals("Imran Tahir", maxWicketWithBestAverage.get(0).player);
+            Assert.assertEquals("Shivam Dube", maxWicketWithBestAverage.get(98).player);
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }
