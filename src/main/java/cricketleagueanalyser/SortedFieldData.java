@@ -11,7 +11,8 @@ public class SortedFieldData {
     Map<Fields, Comparator<CricketLeagueDAO>> sortedField = null;
 
     public enum Fields {
-        Runs, Avg, StrikeRate, FourAndSixAvg, GreatAvgWithBestStrikeRate, MaxRunsWithBestAvg, BestEconomy;
+        Runs, Avg, StrikeRate, FourAndSixAvg, GreatAvgWithBestStrikeRate, MaxRunsWithBestAvg, BestEconomy,
+        BestStrikeWith5wAnd4w, FiveWicketAndFourWicket;
     }
 
     public SortedFieldData() {
@@ -21,8 +22,10 @@ public class SortedFieldData {
         this.sortedField.put(Fields.BestEconomy, comparing(player -> player.eCon));
         this.sortedField.put(Fields.StrikeRate, comparing(iplCsvData -> iplCsvData.strikeRate));
         this.sortedField.put(Fields.FourAndSixAvg, comparing(player -> (player.four * 4 + player.six * 6)));
+        this.sortedField.put(Fields.FiveWicketAndFourWicket, comparing(player -> player.fiveWicket * 5 + player.fourWicket * 4));
         this.sortedField.put(Fields.GreatAvgWithBestStrikeRate, this.sortedField.get(Fields.Avg).thenComparing(player -> player.strikeRate));
         this.sortedField.put(Fields.MaxRunsWithBestAvg, this.sortedField.get(Fields.Runs).thenComparing(player -> player.avg));
+        this.sortedField.put(Fields.BestStrikeWith5wAnd4w, this.sortedField.get(Fields.FiveWicketAndFourWicket).thenComparing(player -> player.strikeRate));
     }
 
     public Comparator<CricketLeagueDAO> getSortedFields(Fields fields) {

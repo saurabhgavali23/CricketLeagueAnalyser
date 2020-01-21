@@ -23,7 +23,6 @@ public class CricketLeagueAnalyser {
                 .sorted(new SortedFieldData().getSortedFields(fieldName))
                 .collect(Collectors.toList());
         Collections.reverse(sortedList);
-        sortedList.stream().forEach(System.out::println);
         return sortedList;
     }
 }
