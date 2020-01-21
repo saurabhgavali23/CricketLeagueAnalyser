@@ -38,4 +38,18 @@ public class BowlingTestCases {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCricketSheetMostWkts_ShouldReturnTopBowlingStrikeRateWhoPlayedIPL2019() {
+
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadBowlerCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
+            List<CricketLeagueDAO> toBowlingAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.StrikeRate);
+            Assert.assertEquals(120.0, toBowlingAvg.get(0).strikeRate, 0);
+            Assert.assertEquals(0.0, toBowlingAvg.get(98).strikeRate, 0);
+        } catch (CricketLeagueException e) {
+            e.printStackTrace();
+        }
+    }
 }

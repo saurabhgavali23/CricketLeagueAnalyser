@@ -11,8 +11,7 @@ public class SortedFieldData {
     Map<Fields, Comparator<CricketLeagueDAO>> sortedField = null;
 
     public enum Fields {
-        POS, PLAYER, Mat, Inns, NotOut, Runs, HighScore, Avg, BallFaced, StrikeRate, Century, HalfCentury,
-        FourAndSixAvg, GreatAvgWithBestStrikeRate, MaxRunsWithBestAvg;
+        Runs, Avg,StrikeRate,FourAndSixAvg, GreatAvgWithBestStrikeRate, MaxRunsWithBestAvg;
     }
 
     public SortedFieldData() {

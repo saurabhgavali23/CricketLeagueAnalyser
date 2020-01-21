@@ -35,7 +35,7 @@ public class BowlerDAO {
     public double eCon;
 
     @CsvBindByName(column = "SR", required = true)
-    public double ballStrikeRate;
+    public double strikeRate;
 
     @CsvBindByName(column = "4w", required = true)
     public int fourWicket;
@@ -57,7 +57,7 @@ public class BowlerDAO {
                 ", bbi=" + bbi +
                 ", avg=" + avg +
                 ", eCon=" + eCon +
-                ", ballStrikeRate=" + ballStrikeRate +
+                ", strikeRate=" + strikeRate +
                 ", fourWicket=" + fourWicket +
                 ", fiveWicket=" + fiveWicket +
                 '}';

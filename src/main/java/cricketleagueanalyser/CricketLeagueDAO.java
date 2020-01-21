@@ -17,22 +17,12 @@ public class CricketLeagueDAO {
     public int four;
     public int six;
 
-    //public int pos;
-    // public String player;
-    // public int mat;
-    // public int Inns;
     public double over;
-    // public int runs;
     public int wickets;
     public int bbi;
-    // public double avg;
     public double eCon;
-    public double ballStrikeRate;
     public int fourWicket;
     public int fiveWicket;
-
-    public CricketLeagueDAO() {
-    }
 
     public CricketLeagueDAO(BatsmanDAO batsmanDAO) {
 
@@ -63,7 +53,7 @@ public class CricketLeagueDAO {
         wickets = bowlerDAO.wickets;
         bbi = bowlerDAO.bbi;
         eCon = bowlerDAO.eCon;
-        ballStrikeRate = bowlerDAO.ballStrikeRate;
+        strikeRate = bowlerDAO.strikeRate;
         fourWicket = bowlerDAO.fourWicket;
         fiveWicket = bowlerDAO.fiveWicket;
     }
@@ -89,7 +79,6 @@ public class CricketLeagueDAO {
                 ", wickets=" + wickets +
                 ", bbi=" + bbi +
                 ", eCon=" + eCon +
-                ", ballStrikeRate=" + ballStrikeRate +
                 ", fourWicket=" + fourWicket +
                 ", fiveWicket=" + fiveWicket +
                 '}';
