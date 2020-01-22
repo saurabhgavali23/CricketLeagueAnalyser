@@ -1,10 +1,10 @@
 package cricketleagueanalyser;
 
-import java.util.List;
+import java.util.Map;
 
 public class CricketLeagueFactory {
 
-    public static <E> List<CricketLeagueDAO> getCricketData(CricketLeagueAnalyser.BatOrBall batOrBall, String csvFilePath) throws CricketLeagueException {
+    public static Map<String, CricketLeagueDAO> getCricketData(CricketLeagueAnalyser.BatOrBall batOrBall, String csvFilePath) throws CricketLeagueException {
         if (batOrBall.equals(CricketLeagueAnalyser.BatOrBall.BATTING))
             return new CricketLeagueAdapter().loadCricketCSVData(csvFilePath, BatsmanDAO.class);
         else if (batOrBall.equals(CricketLeagueAnalyser.BatOrBall.BALLING))

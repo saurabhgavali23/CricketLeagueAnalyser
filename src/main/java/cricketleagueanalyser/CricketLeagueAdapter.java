@@ -8,15 +8,16 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.StreamSupport;
 
 public class CricketLeagueAdapter {
 
-    List<CricketLeagueDAO> SORTEDLIST = new ArrayList<>();
+    Map<String, CricketLeagueDAO> SORTEDLIST = new HashMap<>();
 
-    public <E> List<CricketLeagueDAO> loadCricketCSVData(String CsvFilePath, Class className) throws CricketLeagueException {
+    public <E> Map<String, CricketLeagueDAO> loadCricketCSVData(String CsvFilePath, Class className) throws CricketLeagueException {
         try (Reader reader = Files.newBufferedReader(Paths.get(CsvFilePath));) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
             List<E> CSVList = csvBuilder.getListCsvFile(reader, className);
@@ -24,11 +25,11 @@ public class CricketLeagueAdapter {
             if (className.getName().equals("cricketleagueanalyser.BatsmanDAO")) {
                 StreamSupport.stream(CSVList.spliterator(), false)
                         .map(BatsmanDAO.class::cast)
-                        .forEach(censusData -> SORTEDLIST.add(new CricketLeagueDAO(censusData)));
+                        .forEach(censusData -> SORTEDLIST.put(censusData.player, new CricketLeagueDAO(censusData)));
             } else if (className.getName().equals("cricketleagueanalyser.BowlerDAO")) {
                 StreamSupport.stream(CSVList.spliterator(), false)
                         .map(BowlerDAO.class::cast)
-                        .forEach(censusData -> SORTEDLIST.add(new CricketLeagueDAO(censusData)));
+                        .forEach(censusData -> SORTEDLIST.put(censusData.player, new CricketLeagueDAO(censusData)));
             }
 
             return SORTEDLIST;

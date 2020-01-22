@@ -60,7 +60,7 @@ public class BattingTestCases {
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_RUN);
             List<BatsmanDAO> max4sAnd6s = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.FourAndSixAvg);
             Assert.assertEquals("Andre Russell", max4sAnd6s.get(0).player);
-            Assert.assertEquals("Shakib Al Hasan", max4sAnd6s.get(99).player);
+            Assert.assertEquals("Tim Southee", max4sAnd6s.get(99).player);
 
         } catch (CricketLeagueException e) {
             e.printStackTrace();

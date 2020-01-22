@@ -72,7 +72,7 @@ public class BowlingTestCases {
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
             List<BowlerDAO> bestStrikeRateWith5wAnd4w = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.BestStrikeWith5wAnd4w);
             Assert.assertEquals("Lasith Malinga", bestStrikeRateWith5wAnd4w.get(0).player);
-            Assert.assertEquals("Shivam Dube", bestStrikeRateWith5wAnd4w.get(98).player);
+            Assert.assertEquals("Suresh Raina", bestStrikeRateWith5wAnd4w.get(98).player);
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
@@ -86,7 +86,7 @@ public class BowlingTestCases {
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
             List<BowlerDAO> greatAvgWithBestStrikeRate = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.GreatAvgWithBestStrikeRate);
             Assert.assertEquals("Krishnappa Gowtham", greatAvgWithBestStrikeRate.get(0).player);
-            Assert.assertEquals("Shivam Dube", greatAvgWithBestStrikeRate.get(98).player);
+            Assert.assertEquals("Suresh Raina", greatAvgWithBestStrikeRate.get(98).player);
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
@@ -100,7 +100,7 @@ public class BowlingTestCases {
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
             List<BowlerDAO> maxWicketWithBestAverage = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.MaxWktsWithBestBallingAvg);
             Assert.assertEquals("Imran Tahir", maxWicketWithBestAverage.get(0).player);
-            Assert.assertEquals("Shivam Dube", maxWicketWithBestAverage.get(98).player);
+            Assert.assertEquals("Suresh Raina", maxWicketWithBestAverage.get(98).player);
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }

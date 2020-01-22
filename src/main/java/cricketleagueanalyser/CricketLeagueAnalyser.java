@@ -2,13 +2,14 @@ package cricketleagueanalyser;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
     public enum BatOrBall {BATTING, BALLING}
 
-    List<CricketLeagueDAO> SORTEDLIST = null;
+    Map<String, CricketLeagueDAO> SORTEDLIST = null;
 
     private BatOrBall batAndBall;
 
@@ -22,7 +23,7 @@ public class CricketLeagueAnalyser {
     }
 
     public List getSortedData(SortedFieldData.Fields fieldName) {
-        List sortedList = SORTEDLIST.stream()
+        List sortedList = SORTEDLIST.values().stream()
                 .sorted(new SortedFieldData().getSortedFields(fieldName))
                 .map(cricketLeagueDAO -> cricketLeagueDAO.getCricketDTO(batAndBall))
                 .collect(Collectors.toList());
