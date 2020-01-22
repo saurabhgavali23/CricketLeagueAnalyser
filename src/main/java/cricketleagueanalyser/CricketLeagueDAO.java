@@ -29,7 +29,7 @@ public class CricketLeagueDAO {
         pos = batsmanDAO.pos;
         player = batsmanDAO.player;
         mat = batsmanDAO.mat;
-        inns = batsmanDAO.Inns;
+        inns = batsmanDAO.inns;
         notOut = batsmanDAO.notOut;
         runs = batsmanDAO.runs;
         highScore = batsmanDAO.highScore;
@@ -46,10 +46,10 @@ public class CricketLeagueDAO {
         pos = bowlerDAO.pos;
         player = bowlerDAO.player;
         avg = bowlerDAO.avg;
-        mat = bowlerDAO.Mat;
-        inns = bowlerDAO.Inns;
+        mat = bowlerDAO.mat;
+        inns = bowlerDAO.inns;
         over = bowlerDAO.over;
-        runs = bowlerDAO.Runs;
+        runs = bowlerDAO.runs;
         wickets = bowlerDAO.wickets;
         bbi = bowlerDAO.bbi;
         eCon = bowlerDAO.eCon;
@@ -58,29 +58,9 @@ public class CricketLeagueDAO {
         fiveWicket = bowlerDAO.fiveWicket;
     }
 
-    @Override
-    public String toString() {
-        return "CricketLeagueDAO{" +
-                "pos=" + pos +
-                ", player='" + player + '\'' +
-                ", mat=" + mat +
-                ", inns=" + inns +
-                ", notOut=" + notOut +
-                ", runs=" + runs +
-                ", highScore='" + highScore + '\'' +
-                ", avg=" + avg +
-                ", ballsFaced=" + ballsFaced +
-                ", strikeRate=" + strikeRate +
-                ", century=" + century +
-                ", halfCentury=" + halfCentury +
-                ", four=" + four +
-                ", six=" + six +
-                ", over=" + over +
-                ", wickets=" + wickets +
-                ", bbi=" + bbi +
-                ", eCon=" + eCon +
-                ", fourWicket=" + fourWicket +
-                ", fiveWicket=" + fiveWicket +
-                '}';
+    public Object getCricketDTO(CricketLeagueAnalyser.BatOrBall batAndBall) {
+        if (batAndBall.equals(CricketLeagueAnalyser.BatOrBall.BATTING))
+            return new BatsmanDAO(pos, player, mat, inns, notOut, runs, highScore, avg, ballsFaced, strikeRate, century, halfCentury, four, six);
+        return new BowlerDAO(pos, player, mat, inns, over, runs, wickets, bbi, avg, eCon, strikeRate, fourWicket, fiveWicket);
     }
 }

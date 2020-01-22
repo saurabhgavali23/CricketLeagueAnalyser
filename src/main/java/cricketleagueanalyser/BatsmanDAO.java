@@ -10,16 +10,16 @@ public class BatsmanDAO {
     @CsvBindByName(column = "PLAYER", required = true)
     public String player;
 
-    @CsvBindByName(column = "Mat", required = true)
+    @CsvBindByName(column = "mat", required = true)
     public int mat;
 
-    @CsvBindByName(column = "Inns", required = true)
-    public int Inns;
+    @CsvBindByName(column = "inns", required = true)
+    public int inns;
 
     @CsvBindByName(column = "NO", required = true)
     public int notOut;
 
-    @CsvBindByName(column = "Runs", required = true)
+    @CsvBindByName(column = "runs", required = true)
     public int runs;
 
     @CsvBindByName(column = "HS", required = true)
@@ -52,7 +52,7 @@ public class BatsmanDAO {
                 "pos='" + pos + '\'' +
                 ", player='" + player + '\'' +
                 ", mat=" + mat +
-                ", Inns=" + Inns +
+                ", inns=" + inns +
                 ", notOut=" + notOut +
                 ", runs=" + runs +
                 ", highScore='" + highScore + '\'' +
@@ -64,5 +64,25 @@ public class BatsmanDAO {
                 ", four=" + four +
                 ", six=" + six +
                 '}';
+    }
+
+    public BatsmanDAO() {
+    }
+
+    public BatsmanDAO(int pos, String player, int mat, int inns, int notOut, int runs, String highScore, double avg, int ballsFaced, double strikeRate, int century, int halfCentury, int four, int six) {
+        this.pos = pos;
+        this.player = player;
+        this.mat = mat;
+        this.inns = inns;
+        this.notOut = notOut;
+        this.runs = runs;
+        this.highScore = highScore;
+        this.avg = avg;
+        this.ballsFaced = ballsFaced;
+        this.strikeRate = strikeRate;
+        this.century = century;
+        this.halfCentury = halfCentury;
+        this.four = four;
+        this.six = six;
     }
 }

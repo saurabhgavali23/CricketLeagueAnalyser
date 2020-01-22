@@ -6,7 +6,8 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
-    public enum BatOrBall { BATTING, BALLING}
+    public enum BatOrBall {BATTING, BALLING}
+
     List<CricketLeagueDAO> SORTEDLIST = null;
 
     private BatOrBall batAndBall;
@@ -15,17 +16,17 @@ public class CricketLeagueAnalyser {
         this.batAndBall = batAndBall;
     }
 
-    public int loadCricketCSVData(String CsvFilePath) throws CricketLeagueException{
-        SORTEDLIST = CricketLeagueFactory.getCricketData(batAndBall,CsvFilePath);
+    public int loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
+        SORTEDLIST = CricketLeagueFactory.getCricketData(batAndBall, CsvFilePath);
         return SORTEDLIST.size();
     }
 
     public List getSortedData(SortedFieldData.Fields fieldName) {
         List sortedList = SORTEDLIST.stream()
                 .sorted(new SortedFieldData().getSortedFields(fieldName))
+                .map(cricketLeagueDAO -> cricketLeagueDAO.getCricketDTO(batAndBall))
                 .collect(Collectors.toList());
         Collections.reverse(sortedList);
-        sortedList.stream().forEach(System.out::println);
         return sortedList;
     }
 }

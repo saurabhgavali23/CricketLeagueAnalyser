@@ -10,17 +10,17 @@ public class BowlerDAO {
     @CsvBindByName(column = "PLAYER", required = true)
     public String player;
 
-    @CsvBindByName(column = "Mat", required = true)
-    public int Mat;
+    @CsvBindByName(column = "mat", required = true)
+    public int mat;
 
-    @CsvBindByName(column = "Inns", required = true)
-    public int Inns;
+    @CsvBindByName(column = "inns", required = true)
+    public int inns;
 
     @CsvBindByName(column = "Ov", required = true)
     public double over;
 
-    @CsvBindByName(column = "Runs", required = true)
-    public int Runs;
+    @CsvBindByName(column = "runs", required = true)
+    public int runs;
 
     @CsvBindByName(column = "Wkts", required = true)
     public int wickets;
@@ -49,10 +49,10 @@ public class BowlerDAO {
         return "BowlerDAO{" +
                 "pos=" + pos +
                 ", player='" + player + '\'' +
-                ", Mat=" + Mat +
-                ", Inns=" + Inns +
+                ", mat=" + mat +
+                ", inns=" + inns +
                 ", over=" + over +
-                ", Runs=" + Runs +
+                ", runs=" + runs +
                 ", wickets=" + wickets +
                 ", bbi=" + bbi +
                 ", avg=" + avg +
@@ -61,6 +61,25 @@ public class BowlerDAO {
                 ", fourWicket=" + fourWicket +
                 ", fiveWicket=" + fiveWicket +
                 '}';
+    }
+
+    public BowlerDAO() {
+    }
+
+    public BowlerDAO(int pos, String player, int mat, int inns, double over, int runs, int wickets, int bbi, double avg, double eCon, double strikeRate, int fourWicket, int fiveWicket) {
+        this.pos = pos;
+        this.player = player;
+        this.mat = mat;
+        this.inns = inns;
+        this.over = over;
+        this.runs = runs;
+        this.wickets = wickets;
+        this.bbi = bbi;
+        this.avg = avg;
+        this.eCon = eCon;
+        this.strikeRate = strikeRate;
+        this.fourWicket = fourWicket;
+        this.fiveWicket = fiveWicket;
     }
 }
 

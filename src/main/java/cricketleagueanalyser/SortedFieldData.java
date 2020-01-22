@@ -12,7 +12,7 @@ public class SortedFieldData {
 
     public enum Fields {
         Runs, Avg, StrikeRate, FourAndSixAvg, GreatAvgWithBestStrikeRate, MaxRunsWithBestAvg, BestEconomy,
-        BestStrikeWith5wAnd4w, FiveWicketAndFourWicket,Wickets,MaxWktsWithBestBallingAvg;
+        BestStrikeWith5wAnd4w, FiveWicketAndFourWicket, Wickets, MaxWktsWithBestBallingAvg;
     }
 
     public SortedFieldData() {
@@ -20,7 +20,7 @@ public class SortedFieldData {
         this.sortedField.put(Fields.Avg, comparing(player -> player.avg));
         this.sortedField.put(Fields.Runs, comparing(player -> player.runs));
         this.sortedField.put(Fields.BestEconomy, comparing(player -> player.eCon));
-        this.sortedField.put(Fields.Wickets,comparing(player -> player.wickets));
+        this.sortedField.put(Fields.Wickets, comparing(player -> player.wickets));
         this.sortedField.put(Fields.StrikeRate, comparing(iplCsvData -> iplCsvData.strikeRate));
         this.sortedField.put(Fields.FourAndSixAvg, comparing(player -> (player.four * 4 + player.six * 6)));
         this.sortedField.put(Fields.MaxWktsWithBestBallingAvg, this.sortedField.get(Fields.Wickets).thenComparing(player -> player.avg));
