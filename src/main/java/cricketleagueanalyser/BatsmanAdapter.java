@@ -29,8 +29,9 @@ public class BatsmanAdapter extends CricketLeagueAdapter {
 
             StreamSupport.stream(CSVList.spliterator(), false)
                     .filter(cricketData -> cricketLeagueDAOMap.get(cricketData.player) != null)
-                    .forEach(cricketData -> cricketLeagueDAOMap.get(cricketData.player).ballAvg = cricketData.ballAvg);
-
+                    .forEach(cricketData -> {
+                        cricketLeagueDAOMap.get(cricketData.player).ballAvg = cricketData.ballAvg;
+                        cricketLeagueDAOMap.get(cricketData.player).wickets = cricketData.wickets;});
             return cricketLeagueDAOMap.size();
 
         } catch (IOException e) {
