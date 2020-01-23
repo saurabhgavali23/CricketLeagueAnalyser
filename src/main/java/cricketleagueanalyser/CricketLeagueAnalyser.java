@@ -17,7 +17,7 @@ public class CricketLeagueAnalyser {
         this.batAndBall = batAndBall;
     }
 
-    public int loadCricketCSVData(String CsvFilePath) throws CricketLeagueException {
+    public int loadCricketCSVData(String... CsvFilePath) throws CricketLeagueException {
         SORTEDLIST = CricketLeagueFactory.getCricketData(batAndBall, CsvFilePath);
         return SORTEDLIST.size();
     }

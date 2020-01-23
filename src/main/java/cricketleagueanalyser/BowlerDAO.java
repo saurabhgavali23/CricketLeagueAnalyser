@@ -29,7 +29,7 @@ public class BowlerDAO {
     public int bbi;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double avg;
+    public double ballAvg;
 
     @CsvBindByName(column = "Econ", required = true)
     public double eCon;
@@ -55,7 +55,7 @@ public class BowlerDAO {
                 ", runs=" + runs +
                 ", wickets=" + wickets +
                 ", bbi=" + bbi +
-                ", avg=" + avg +
+                ", ballAvg=" + ballAvg +
                 ", eCon=" + eCon +
                 ", strikeRate=" + strikeRate +
                 ", fourWicket=" + fourWicket +
@@ -75,7 +75,7 @@ public class BowlerDAO {
         this.runs = runs;
         this.wickets = wickets;
         this.bbi = bbi;
-        this.avg = avg;
+        this.ballAvg = avg;
         this.eCon = eCon;
         this.strikeRate = strikeRate;
         this.fourWicket = fourWicket;

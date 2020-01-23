@@ -56,7 +56,7 @@ public class BatsmanDAO {
                 ", notOut=" + notOut +
                 ", runs=" + runs +
                 ", highScore='" + highScore + '\'' +
-                ", avg=" + avg +
+                ", ballAvg=" + avg +
                 ", ballsFaced=" + ballsFaced +
                 ", strikeRate=" + strikeRate +
                 ", century=" + century +

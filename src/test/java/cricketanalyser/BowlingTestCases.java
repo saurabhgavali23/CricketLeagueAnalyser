@@ -28,9 +28,9 @@ public class BowlingTestCases {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.BatOrBall.BALLING);
             cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
-            List<BowlerDAO> topAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.Avg);
-            Assert.assertEquals(166.0, topAvg.get(0).avg, 0);
-            Assert.assertEquals(0.0, topAvg.get(98).avg, 0);
+            List<BowlerDAO> topAvg = cricketLeagueAnalyser.getSortedData(SortedFieldData.Fields.BallAvg);
+            Assert.assertEquals(166.0, topAvg.get(0).ballAvg, 0);
+            Assert.assertEquals(0.0, topAvg.get(98).ballAvg, 0);
         } catch (CricketLeagueException e) {
             e.printStackTrace();
         }
