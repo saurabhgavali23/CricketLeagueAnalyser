@@ -7,6 +7,12 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
+    CricketLeagueFactory cricketLeagueFactory = new CricketLeagueFactory();
+    public CricketLeagueAnalyser(CricketLeagueFactory cricketLeagueFactoryMock, BatOrBall batAndBall) {
+        this.cricketLeagueFactory = cricketLeagueFactoryMock;
+        this.batAndBall = batAndBall;
+    }
+
     public enum BatOrBall {BATTING, BALLING}
 
     Map<String, CricketLeagueDAO> SORTEDLIST = null;
@@ -18,7 +24,7 @@ public class CricketLeagueAnalyser {
     }
 
     public int loadCricketCSVData(String... CsvFilePath) throws CricketLeagueException {
-        SORTEDLIST = CricketLeagueFactory.getCricketData(batAndBall, CsvFilePath);
+        SORTEDLIST = cricketLeagueFactory.getCricketData(batAndBall, CsvFilePath);
         return SORTEDLIST.size();
     }
 
