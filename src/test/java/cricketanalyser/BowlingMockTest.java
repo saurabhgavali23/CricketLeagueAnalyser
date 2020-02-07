@@ -1,9 +1,6 @@
 package cricketanalyser;
 
-import cricketleagueanalyser.CricketLeagueAnalyser;
-import cricketleagueanalyser.CricketLeagueDAO;
-import cricketleagueanalyser.CricketLeagueException;
-import cricketleagueanalyser.CricketLeagueFactory;
+import cricketleagueanalyser.*;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -22,7 +19,7 @@ public class BowlingMockTest {
     private static final String IPL2019_FACT_SHEET_MOST_WKTS = "./src/test/resources/IPL2019FactSheetMostWkts.csv";
 
     @Mock
-    CricketLeagueFactory cricketLeagueFactoryMock;
+    TestStaticMethodOfCricketFactory testStaticMethodOfCricketFactory;
 
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
@@ -33,8 +30,8 @@ public class BowlingMockTest {
         try {
             Map<String, CricketLeagueDAO> map = new HashMap<>();
             map.put("aldj", new CricketLeagueDAO());
-            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(cricketLeagueFactoryMock,CricketLeagueAnalyser.BatOrBall.BALLING);
-            when(cricketLeagueFactoryMock.getCricketData(CricketLeagueAnalyser.BatOrBall.BALLING, IPL2019_FACT_SHEET_MOST_WKTS))
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.BatOrBall.BALLING, testStaticMethodOfCricketFactory);
+            when(testStaticMethodOfCricketFactory.loadCricketCSVData(CricketLeagueAnalyser.BatOrBall.BALLING, IPL2019_FACT_SHEET_MOST_WKTS))
                     .thenReturn(map);
             int noOfRecords = cricketLeagueAnalyser.loadCricketCSVData(IPL2019_FACT_SHEET_MOST_WKTS);
             Assert.assertEquals(1, noOfRecords);

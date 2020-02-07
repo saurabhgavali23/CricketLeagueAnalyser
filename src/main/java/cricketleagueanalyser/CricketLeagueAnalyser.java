@@ -7,11 +7,7 @@ import java.util.stream.Collectors;
 
 public class CricketLeagueAnalyser {
 
-    CricketLeagueFactory cricketLeagueFactory = new CricketLeagueFactory();
-    public CricketLeagueAnalyser(CricketLeagueFactory cricketLeagueFactoryMock, BatOrBall batAndBall) {
-        this.cricketLeagueFactory = cricketLeagueFactoryMock;
-        this.batAndBall = batAndBall;
-    }
+    public TestStaticMethodOfCricketFactory csvClass = new TestStaticMethodOfCricketFactory();
 
     public enum BatOrBall {BATTING, BALLING}
 
@@ -19,12 +15,17 @@ public class CricketLeagueAnalyser {
 
     private BatOrBall batAndBall;
 
+    public CricketLeagueAnalyser(BatOrBall batAndBall,TestStaticMethodOfCricketFactory csvClass) {
+        this.batAndBall = batAndBall;
+        this.csvClass = csvClass;
+    }
+
     public CricketLeagueAnalyser(BatOrBall batAndBall) {
         this.batAndBall = batAndBall;
     }
 
     public int loadCricketCSVData(String... CsvFilePath) throws CricketLeagueException {
-        SORTEDLIST = cricketLeagueFactory.getCricketData(batAndBall, CsvFilePath);
+        SORTEDLIST = csvClass.loadCricketCSVData(batAndBall, CsvFilePath);
         return SORTEDLIST.size();
     }
 
