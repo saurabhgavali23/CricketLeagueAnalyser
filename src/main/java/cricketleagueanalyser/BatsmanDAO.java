@@ -66,8 +66,6 @@ public class BatsmanDAO {
                 '}';
     }
 
-    public BatsmanDAO() {
-    }
 
     public BatsmanDAO(int pos, String player, int mat, int inns, int notOut, int runs, String highScore, double avg, int ballsFaced, double strikeRate, int century, int halfCentury, int four, int six) {
         this.pos = pos;
@@ -84,5 +82,8 @@ public class BatsmanDAO {
         this.halfCentury = halfCentury;
         this.four = four;
         this.six = six;
+    }
+
+    public BatsmanDAO() {
     }
 }
